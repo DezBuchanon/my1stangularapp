@@ -7,14 +7,15 @@
     <p>Your To Do List.. Click item to delete. ({{itemCount}})</p>
   </div>
 </div>
-<div class="container color-light">
-  <div class="col">
+<div class="container color-light"[@tasks]="tasks.length">
+  <div class="col"> 
     <p class="sm">Use the form below to build your to do list.</p>
 
     <form>
       <input type="text" class="txt" name="item" placeholder="Enter an activity.." [(ngModel)]="taskText">
       
       <input type="submit" class="btn" [value]="btnText"(click)="addItem()">
+
     </form>
   </div>
   <div class="col">
@@ -22,4 +23,5 @@
       {{ task }}
     </p>
   </div>
+
 </div>
